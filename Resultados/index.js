@@ -7,7 +7,7 @@ const urlParams = new URLSearchParams(queryString);
 const code = urlParams.get('code')
 
 console.log(code);
-fetch("./data.json").then(response => {
+fetch("https://raw.githubusercontent.com/resultados-labreferencia/resultados-labreferencia.github.io/main/Resultados/data.json").then(response => {
     return response.json()
 }).then(json => {
     const px = json[`${code}`]
